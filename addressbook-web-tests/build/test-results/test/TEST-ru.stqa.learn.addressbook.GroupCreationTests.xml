@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.learn.addressbook.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-06T00:26:34" hostname="HP820G4-6" time="4.063">
+  <properties/>
+  <testcase name="testGroupCreationTests" classname="ru.stqa.learn.addressbook.GroupCreationTests" time="4.063"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1578270383915	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofilemjrrQh"
+1578270387623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1578270387623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1578270387624	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1578270387624	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1578270393790	Marionette	INFO	Listening on port 54615
+1578270393959	Marionette	WARN	TLS certificate errors will be ignored for this session
+янв 06, 2020 3:26:34 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
