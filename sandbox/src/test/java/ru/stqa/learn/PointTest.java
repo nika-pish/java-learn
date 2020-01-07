@@ -7,8 +7,9 @@ public class PointTest {
 
     @Test
     public void testDistance(){
-        Point p1 = new Point (4,4,4,6);
-        p1.distance();
-        Assert.assertEquals(p1.distance(), 2);
+        Point p1 = new Point (4,4);
+        Point p2 = new Point (4,6);
+        p1.distance(p2);
+        Assert.assertEquals(p1.distance(p2), 2);
     }
 }
