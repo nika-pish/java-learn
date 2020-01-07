@@ -5,10 +5,11 @@ public class MyFirstProgram {
 		System.out.println("Hello, World");
 
 
-		Point p1 = new Point(3, 5,6,8);
+		Point p1 = new Point(3, 5);
+		Point p2 = new Point(6, 8);
 
 
-		System.out.println("Расстояние между двумя точками = "+ p1.distance());
+		System.out.println("Расстояние между двумя точками = "+ p1.distance(p2));
 
 	}
 
