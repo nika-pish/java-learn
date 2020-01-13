@@ -61,7 +61,6 @@ public class ContactData {
         return bmonth;
     }
 
-    public String getByear() {
-        return byear;
-    }
+    public String getByear() { return byear; }
+
 }

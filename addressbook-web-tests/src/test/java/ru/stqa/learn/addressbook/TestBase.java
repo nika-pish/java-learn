@@ -5,13 +5,17 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.assertTrue;
+
 public class TestBase {
     public WebDriver wd;
+    protected boolean acceptNextAlert;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
@@ -56,11 +60,57 @@ public class TestBase {
       wd.findElement(By.linkText("groups")).click();
     }
 
+    protected void submitContactCreation() {
+        wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+    }
+
+    protected void fillContactForm(ContactData contactData) {
+        wd.findElement(By.name("firstname")).click();
+        wd.findElement(By.name("firstname")).clear();
+        wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
+        wd.findElement(By.name("middlename")).click();
+        wd.findElement(By.name("middlename")).clear();
+        wd.findElement(By.name("middlename")).sendKeys(contactData.getMiddlename());
+        wd.findElement(By.name("lastname")).click();
+        wd.findElement(By.name("lastname")).clear();
+        wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
+        wd.findElement(By.name("nickname")).click();
+        wd.findElement(By.name("nickname")).clear();
+        wd.findElement(By.name("nickname")).sendKeys(contactData.getNickname());
+        wd.findElement(By.name("address")).click();
+        wd.findElement(By.name("address")).clear();
+        wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
+        wd.findElement(By.name("mobile")).click();
+        wd.findElement(By.name("mobile")).clear();
+        wd.findElement(By.name("mobile")).sendKeys(contactData.getMobile());
+        wd.findElement(By.name("email")).click();
+        wd.findElement(By.name("email")).clear();
+        wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
+        wd.findElement(By.name("bday")).click();
+        new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getBday());
+        wd.findElement(By.name("bday")).click();
+        wd.findElement(By.name("bmonth")).click();
+        new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getBmonth());
+        wd.findElement(By.name("bmonth")).click();
+        wd.findElement(By.name("byear")).click();
+        wd.findElement(By.name("byear")).clear();
+        wd.findElement(By.name("byear")).sendKeys(contactData.getByear());
+        wd.findElement(By.xpath("//body")).click();
+        wd.findElement(By.name("theform")).click();
+    }
+
+    protected void goToAddNewContactPage() {
+        wd.findElement(By.linkText("add new")).click();
+    }
+
+    protected void goToHomePage() {
+        wd.findElement(By.linkText("home")).click();
+    }
+
     @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
       logout();
       wd.quit();
-
 
     }
 
@@ -92,5 +142,17 @@ public class TestBase {
 
     protected void selectGroup(String s) {
       wd.findElement(By.name(s)).click();
+    }
+
+    protected void deleteContact() {
+      wd.findElement(By.xpath("//input[@value='Delete']")).click();
+    }
+
+    protected void acceptDeletion() {
+        wd.switchTo().alert().accept();
+    }
+
+    protected void selectContact() {
+      wd.findElement(By.name("selected[]")).click();
     }
 }
