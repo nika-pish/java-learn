@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.learn.PointTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-07T11:01:39" hostname="HP820G4-6" time="0.022">
-  <properties/>
-  <testcase name="testDistance" classname="ru.stqa.learn.PointTest" time="0.022"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
