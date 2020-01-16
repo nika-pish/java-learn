@@ -5,54 +5,37 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.learn.addressbook.model.ContactData;
 
-public class ContactHelper {
-    private WebDriver wd;
+public class ContactHelper extends HelperBase{
 
     public ContactHelper(WebDriver wd) {
-        this.wd = wd;
+        super (wd);
     }
 
     public void submitContactCreation() {
-        wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+        click(By.xpath("(//input[@name='submit'])[2]"));
     }
 
     public void fillContactForm(ContactData contactData) {
-        wd.findElement(By.name("firstname")).click();
-        wd.findElement(By.name("firstname")).clear();
-        wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-        wd.findElement(By.name("middlename")).click();
-        wd.findElement(By.name("middlename")).clear();
-        wd.findElement(By.name("middlename")).sendKeys(contactData.getMiddlename());
-        wd.findElement(By.name("lastname")).click();
-        wd.findElement(By.name("lastname")).clear();
-        wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
-        wd.findElement(By.name("nickname")).click();
-        wd.findElement(By.name("nickname")).clear();
-        wd.findElement(By.name("nickname")).sendKeys(contactData.getNickname());
-        wd.findElement(By.name("address")).click();
-        wd.findElement(By.name("address")).clear();
-        wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
-        wd.findElement(By.name("mobile")).click();
-        wd.findElement(By.name("mobile")).clear();
-        wd.findElement(By.name("mobile")).sendKeys(contactData.getMobile());
-        wd.findElement(By.name("email")).click();
-        wd.findElement(By.name("email")).clear();
-        wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
-        wd.findElement(By.name("bday")).click();
+        type(By.name("firstname"),contactData.getFirstname());
+        type(By.name("middlename"),contactData.getMiddlename());
+        type(By.name("lastname"),contactData.getLastname());
+        type(By.name("nickname"),contactData.getNickname());
+        type(By.name("address"),contactData.getAddress());
+        type(By.name("mobile"),contactData.getMobile());
+        type(By.name("email"),contactData.getEmail());
+        click(By.name("bday"));
         new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getBday());
-        wd.findElement(By.name("bday")).click();
-        wd.findElement(By.name("bmonth")).click();
+        click(By.name("bday"));
+        click(By.name("bmonth"));
         new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getBmonth());
-        wd.findElement(By.name("bmonth")).click();
-        wd.findElement(By.name("byear")).click();
-        wd.findElement(By.name("byear")).clear();
-        wd.findElement(By.name("byear")).sendKeys(contactData.getByear());
-        wd.findElement(By.xpath("//body")).click();
-        wd.findElement(By.name("theform")).click();
+        click(By.name("bmonth"));
+        type(By.name("byear"),contactData.getByear());
+        click(By.xpath("//body"));
+        click(By.name("theform"));
     }
 
     public void deleteContact() {
-      wd.findElement(By.xpath("//input[@value='Delete']")).click();
+        click(By.xpath("//input[@value='Delete']"));
     }
 
     public void acceptDeletion() {
@@ -60,6 +43,6 @@ public class ContactHelper {
     }
 
     public void selectContact() {
-      wd.findElement(By.name("selected[]")).click();
+        click(By.name("selected[]"));
     }
 }

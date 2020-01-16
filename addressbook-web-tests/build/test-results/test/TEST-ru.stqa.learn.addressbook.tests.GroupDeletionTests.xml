@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.learn.addressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-13T21:16:50" hostname="HP820G4-6" time="1.078">
+<testsuite name="ru.stqa.learn.addressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-16T11:17:47" hostname="HP820G4-6" time="1.234">
   <properties/>
-  <testcase name="testGroupDeletion" classname="ru.stqa.learn.addressbook.tests.GroupDeletionTests" time="1.078"/>
+  <testcase name="testGroupDeletion" classname="ru.stqa.learn.addressbook.tests.GroupDeletionTests" time="1.234"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1578950204167	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileNTceHe"
-1578950205077	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1578950205218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1578950205218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1578950205218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1578950205218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+  <system-err><![CDATA[1579173459357	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileZqdUcb"
+1579173460473	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1579173460638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579173460638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1579173460638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579173460638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1578950208912	Marionette	INFO	Listening on port 54879
-1578950208981	Marionette	WARN	TLS certificate errors will be ignored for this session
-янв 14, 2020 12:16:49 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1579173464866	Marionette	INFO	Listening on port 56673
+1579173465393	Marionette	WARN	TLS certificate errors will be ignored for this session
+янв 16, 2020 2:17:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1578950211656	Marionette	INFO	Stopped listening on port 54879
+1579173469049	Marionette	INFO	Stopped listening on port 56673
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
