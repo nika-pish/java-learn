@@ -30,8 +30,6 @@ public class ContactHelper extends HelperBase{
         new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getBmonth());
         click(By.name("bmonth"));
         type(By.name("byear"),contactData.getByear());
-        click(By.xpath("//body"));
-        click(By.name("theform"));
     }
 
     public void deleteContact() {
@@ -45,4 +43,10 @@ public class ContactHelper extends HelperBase{
     public void selectContact() {
         click(By.name("selected[]"));
     }
+
+    public void initContactModification() { click(By.xpath("//img[@alt='Edit']")); }
+
+    public void submitContactModification() { click(By.name("update"));
+    }
 }
+
