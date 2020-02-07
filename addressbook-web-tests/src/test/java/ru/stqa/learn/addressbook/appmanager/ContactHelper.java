@@ -11,6 +11,8 @@ import ru.stqa.learn.addressbook.model.GroupData;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.openqa.selenium.By.xpath;
+
 public class ContactHelper extends HelperBase{
 
     public ContactHelper(WebDriver wd) {
@@ -18,7 +20,7 @@ public class ContactHelper extends HelperBase{
     }
 
     public void submitContactCreation() {
-        click(By.xpath("(//input[@name='submit'])[2]"));
+        click(xpath("(//input[@name='submit'])[2]"));
     }
 
     public void fillContactForm(ContactData contactData, boolean creation) {
@@ -45,7 +47,7 @@ public class ContactHelper extends HelperBase{
     }
 
     public void deleteContact() {
-        click(By.xpath("//input[@value='Delete']"));
+        click(xpath("//input[@value='Delete']"));
     }
 
     public void acceptDeletion() {
@@ -57,7 +59,7 @@ public class ContactHelper extends HelperBase{
         wd.findElements(By.name("selected[]")).get(index).click();
     }
 
-    public void initContactModification() { click(By.xpath("//img[@alt='Edit']")); }
+    public void initContactModification() { click(xpath("//img[@alt='Edit']")); }
 
     public void submitContactModification() { click(By.name("update"));
     }
@@ -79,10 +81,12 @@ public class ContactHelper extends HelperBase{
 
     public List<ContactData> getContactList() {
         List<ContactData> contacts = new ArrayList<ContactData>();
-        List<WebElement>elements = wd.findElements(By.xpath("//input[@accept]"));
+        List<WebElement>elements = wd.findElements(xpath("//tr[@name='entry']"));
         for (WebElement element : elements){
-            String email = element.getText();
-            ContactData contact  = new ContactData(null, null, null, null, null, null, email, null, null, null, null);
+            String lastname = element.findElement(xpath("//td[2]")).getText();
+            System.out.println(lastname);
+            String id = element.findElement(By.tagName("input")).getAttribute("value");
+            ContactData contact  = new ContactData (id, null, null, lastname, null, null, null, null, null, null, null, null);
             contacts.add(contact);
         }
         return contacts;
