@@ -14,7 +14,10 @@ public class ContactDeletionTests extends TestBase {
         app.goTo().homePage();
         if (app.contact().list().size() == 0) {
             app.goTo().addNewContactPage();
-            app.contact().create(new ContactData("Ivan", "Ivanov", "Ivanovich", "IvIv", "Moscow", "44555", "222443@fake.fake", "1", "January", "1990", "test1"));
+            app.contact().create(new ContactData()
+                    .withFirstname("Petr"). withMiddlename("Ivanovich"). withLastname("Ivanov").withNickname("IvIv")
+                    .withAddress("Moscow").withMobile("44555").withEmail("222443@fake.fake")
+                    .withBday("1"). withBmonth("January").withByear("1990"). withGroup("test1"));
             app.goTo().homePage();
         }
     }
