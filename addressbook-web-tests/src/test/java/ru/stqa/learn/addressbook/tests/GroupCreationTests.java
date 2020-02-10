@@ -9,7 +9,7 @@ import java.util.List;
 
 public class GroupCreationTests extends TestBase {
 
-  @Test
+  @Test (enabled = false)
   public void testGroupCreation() throws Exception {
     app.goTo().groupPage();
     List<GroupData> before = app.group().list();

@@ -16,7 +16,7 @@ public class ContactModificationTests extends TestBase{
         if (app.contact().list().size() == 0) {
             app.goTo().addNewContactPage();
             app.contact().create(new ContactData()
-                    .withFirstname("Petr"). withMiddlename("Ivanovich"). withLastname("Ivanov").withNickname("IvIv")
+                    .withFirstname("Petr"). withMiddlename("Ivanov"). withLastname("Ivanovich").withNickname("IvIv")
                     .withAddress("Moscow").withMobile("44555").withEmail("222443@fake.fake")
                     .withBday("1"). withBmonth("January").withByear("1990"). withGroup("test1"));
             app.goTo().homePage();
@@ -29,7 +29,7 @@ public class ContactModificationTests extends TestBase{
         List<ContactData> before = app.contact().list();
         int index = before.size() -1;
         ContactData contact = new ContactData()
-                .withId(before.get(index).getId()).withFirstname("Petr"). withMiddlename("Ivanovich"). withLastname("Ivanov")
+                .withId(before.get(index).getId()).withFirstname("Petr"). withMiddlename("Ivanov"). withLastname("Ivanovich")
                 .withNickname("IvIv").withAddress("Moscow").withMobile("44555").withEmail("222443@fake.fake")
                 .withBday("1"). withBmonth("January").withByear("1990");
         app.contact().modify(index, contact);
