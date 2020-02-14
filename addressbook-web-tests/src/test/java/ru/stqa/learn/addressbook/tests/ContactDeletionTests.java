@@ -22,7 +22,7 @@ public class ContactDeletionTests extends TestBase {
         }
     }
 
-    @Test
+    @Test (enabled = false)
     public void testContactDeletion() throws Exception {
 
         List<ContactData> before = app.contact().list();
