@@ -16,7 +16,7 @@ public class ContactCreationTests extends TestBase {
         ContactData contact = new ContactData()
                 .withFirstname("Petr"). withMiddlename("Ivanovich"). withLastname("Ivanov").withNickname("IvIv")
                 .withAddress("Moscow").withMobile("44555").withEmail("222443@fake.fake")
-                .withBday("1"). withBmonth("January").withByear("1990"). withGroup("test1");
+                .withBday("1"). withBmonth("January").withByear("1990"). withGroup("test2");
         app.goTo().addNewContactPage();
         app.contact().create(contact);
         app.goTo().homePage();
@@ -33,7 +33,7 @@ public class ContactCreationTests extends TestBase {
         ContactData contact = new ContactData()
                 .withFirstname("Petr'"). withMiddlename("Ivanovich"). withLastname("Ivanov").withNickname("IvIv")
                 .withAddress("Moscow").withMobile("44555").withEmail("222443@fake.fake")
-                .withBday("1"). withBmonth("January").withByear("1990"). withGroup("test1");
+                .withBday("1"). withBmonth("January").withByear("1990"). withGroup("test2");
         app.goTo().addNewContactPage();
         app.contact().create(contact);
         app.goTo().homePage();
