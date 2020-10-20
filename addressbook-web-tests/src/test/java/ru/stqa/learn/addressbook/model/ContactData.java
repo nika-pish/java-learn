@@ -135,9 +135,7 @@ public class ContactData {
     return nickname;
   }
 
-  public String getAddress() {
-    return address;
-  }
+  public String getAddress() { return address; }
 
   public String getMobilePhone() {
     return mobilePhone;
