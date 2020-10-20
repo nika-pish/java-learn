@@ -139,11 +139,11 @@ public class ContactHelper extends HelperBase {
     for (WebElement element : elements) {
       String lastname = element.findElement(xpath(".//td[2]")).getText();
       String firstname = element.findElement(xpath(".//td[3]")).getText();
-      String[] phones = element.findElement(xpath(".//td[6]")).getText().split("\n");
+      String allPhones = element.findElement(xpath(".//td[6]")).getText();
       System.out.println(lastname);
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
       contactCache.add(new ContactData().withId(id).withLastname(lastname).withFirstname(firstname)
-              .withHomePhone(phones[0]).withMobilePhone(phones[1]).withWorkPhone(phones[2]));
+              .withAllPhones(allPhones));
     }
     return new Contacts(contactCache);
   }

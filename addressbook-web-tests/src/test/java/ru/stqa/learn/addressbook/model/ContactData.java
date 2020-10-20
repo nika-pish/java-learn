@@ -12,11 +12,13 @@ public class ContactData {
   private String homePhone;
   private String mobilePhone;
   private String workPhone;
+  private String allPhones;
   private String email;
   private String bday;
   private String bmonth;
   private String byear;
   private String group;
+
 
 
   public int getId() {
@@ -93,6 +95,10 @@ public class ContactData {
     return this;
   }
 
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
+    return this;
+  }
 
   public String getFirstname() {
     return firstname;
@@ -124,6 +130,10 @@ public class ContactData {
 
   public String getHomePhone() {
     return homePhone;
+  }
+
+  public String getAllPhones() {
+    return allPhones;
   }
 
   public String getEmail() {
