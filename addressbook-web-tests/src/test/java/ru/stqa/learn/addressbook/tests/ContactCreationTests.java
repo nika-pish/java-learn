@@ -4,18 +4,22 @@ import org.testng.annotations.Test;
 import ru.stqa.learn.addressbook.model.ContactData;
 import ru.stqa.learn.addressbook.model.Contacts;
 
+import java.io.File;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase {
 
-  @Test
+  @Test(enabled = true)
   public void testContactCreation() throws Exception {
     app.goTo().homePage();
     Contacts before = app.contact().all();
+    File photo = new File("src/test/resources/stru.png");
     ContactData contact = new ContactData()
             .withFirstname("Petr").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
-            .withAddress("Moscow").withHomePhone("111").withMobilePhone("222").withWorkPhone("333").withEmail("222443@fake.fake")
+            .withPhoto(photo).withAddress("Moscow").withHomePhone("111").withMobilePhone("222").withWorkPhone("333")
+            .withEmail("222443@fake.fake").withEmail2("555666@fake.fake").withEmail3("777888@fake.fake")
             .withBday("1").withBmonth("January").withByear("1990").withGroup("test2");
     app.goTo().addNewContactPage();
     app.contact().create(contact);
@@ -26,7 +30,7 @@ public class ContactCreationTests extends TestBase {
             before.withAdded(contact.withId(after.stream().mapToInt((o1) -> o1.getId()).max().getAsInt()))));
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void testBadContactCreation() throws Exception {
     app.goTo().homePage();
     Contacts before = app.contact().all();
