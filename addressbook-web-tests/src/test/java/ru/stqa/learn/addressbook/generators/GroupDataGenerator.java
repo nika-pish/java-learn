@@ -24,7 +24,7 @@ public class GroupDataGenerator {
   public static void main(String[] args) throws IOException {
     GroupDataGenerator generator = new GroupDataGenerator();
     JCommander jCommander = new JCommander(generator);
-    try{
+    try {
       jCommander.parse(args);
     } catch (ParameterException ex) {
       jCommander.usage();
