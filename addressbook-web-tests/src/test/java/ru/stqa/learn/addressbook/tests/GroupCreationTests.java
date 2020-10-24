@@ -27,7 +27,6 @@ public class GroupCreationTests extends TestBase {
     String[] names = new String[]{"test1", "test2", "test3"};
       app.goTo().groupPage();
       Groups before = app.group().all();
-
       app.group().create(group);
       assertThat(app.group().count(), equalTo(before.size() + 1));
       Groups after = app.group().all();
