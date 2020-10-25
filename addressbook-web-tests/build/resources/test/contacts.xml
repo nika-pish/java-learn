@@ -1,0 +1,42 @@
+<list>
+  <ru.stqa.learn.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Sidor 0</firstname>
+    <lastname>Sidorov 0</lastname>
+    <address>Saint-Petersburg 0</address>
+    <mobilePhone>555 0</mobilePhone>
+    <email>222443@fake.fake 0</email>
+  </ru.stqa.learn.addressbook.model.ContactData>
+  <ru.stqa.learn.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Sidor 1</firstname>
+    <lastname>Sidorov 1</lastname>
+    <address>Saint-Petersburg 1</address>
+    <mobilePhone>555 1</mobilePhone>
+    <email>222443@fake.fake 1</email>
+  </ru.stqa.learn.addressbook.model.ContactData>
+  <ru.stqa.learn.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Sidor 2</firstname>
+    <lastname>Sidorov 2</lastname>
+    <address>Saint-Petersburg 2</address>
+    <mobilePhone>555 2</mobilePhone>
+    <email>222443@fake.fake 2</email>
+  </ru.stqa.learn.addressbook.model.ContactData>
+  <ru.stqa.learn.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Sidor 3</firstname>
+    <lastname>Sidorov 3</lastname>
+    <address>Saint-Petersburg 3</address>
+    <mobilePhone>555 3</mobilePhone>
+    <email>222443@fake.fake 3</email>
+  </ru.stqa.learn.addressbook.model.ContactData>
+  <ru.stqa.learn.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Sidor 4</firstname>
+    <lastname>Sidorov 4</lastname>
+    <address>Saint-Petersburg 4</address>
+    <mobilePhone>555 4</mobilePhone>
+    <email>222443@fake.fake 4</email>
+  </ru.stqa.learn.addressbook.model.ContactData>
+</list>

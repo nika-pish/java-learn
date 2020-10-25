@@ -1,0 +1,37 @@
+[
+  {
+    "firstname": "Sidor 0",
+    "lastname": "Sidorov 0",
+    "address": "Saint-Petersburg 0",
+    "mobilePhone": "555 0",
+    "email": "222443@fake.fake 0"
+  },
+  {
+    "firstname": "Sidor 1",
+    "lastname": "Sidorov 1",
+    "address": "Saint-Petersburg 1",
+    "mobilePhone": "555 1",
+    "email": "222443@fake.fake 1"
+  },
+  {
+    "firstname": "Sidor 2",
+    "lastname": "Sidorov 2",
+    "address": "Saint-Petersburg 2",
+    "mobilePhone": "555 2",
+    "email": "222443@fake.fake 2"
+  },
+  {
+    "firstname": "Sidor 3",
+    "lastname": "Sidorov 3",
+    "address": "Saint-Petersburg 3",
+    "mobilePhone": "555 3",
+    "email": "222443@fake.fake 3"
+  },
+  {
+    "firstname": "Sidor 4",
+    "lastname": "Sidorov 4",
+    "address": "Saint-Petersburg 4",
+    "mobilePhone": "555 4",
+    "email": "222443@fake.fake 4"
+  }
+]
