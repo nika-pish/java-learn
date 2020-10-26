@@ -5,6 +5,10 @@
     <address>Saint-Petersburg 0</address>
     <mobilePhone>555 0</mobilePhone>
     <email>222443@fake.fake 0</email>
+    <bday>1</bday>
+    <bmonth>February</bmonth>
+    <byear>1999</byear>
+    <group>test2</group>
   </contact>
   <contact>
     <firstname>Sidor 1</firstname>
@@ -12,6 +16,10 @@
     <address>Saint-Petersburg 1</address>
     <mobilePhone>555 1</mobilePhone>
     <email>222443@fake.fake 1</email>
+    <bday>1</bday>
+    <bmonth>February</bmonth>
+    <byear>1999</byear>
+    <group>test2</group>
   </contact>
   <contact>
     <firstname>Sidor 2</firstname>
@@ -19,19 +27,9 @@
     <address>Saint-Petersburg 2</address>
     <mobilePhone>555 2</mobilePhone>
     <email>222443@fake.fake 2</email>
-  </contact>
-  <contact>
-    <firstname>Sidor 3</firstname>
-    <lastname>Sidorov 3</lastname>
-    <address>Saint-Petersburg 3</address>
-    <mobilePhone>555 3</mobilePhone>
-    <email>222443@fake.fake 3</email>
-  </contact>
-  <contact>
-    <firstname>Sidor 4</firstname>
-    <lastname>Sidorov 4</lastname>
-    <address>Saint-Petersburg 4</address>
-    <mobilePhone>555 4</mobilePhone>
-    <email>222443@fake.fake 4</email>
+    <bday>1</bday>
+    <bmonth>February</bmonth>
+    <byear>1999</byear>
+    <group>test2</group>
   </contact>
 </list>
