@@ -68,7 +68,7 @@ public class ContactCreationTests extends TestBase {
             before.withAdded(contact.withId(after.stream().mapToInt((o1) -> o1.getId()).max().getAsInt()))));
   }
 
-  @Test (enabled = true)
+  @Test (enabled = false)
   public void testContactCreationWithPhoto() {
     app.goTo().homePage();
     Contacts before = app.contact().all();

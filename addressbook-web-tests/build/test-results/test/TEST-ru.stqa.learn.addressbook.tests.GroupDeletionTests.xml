@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.learn.addressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-26T16:48:13" hostname="HP820G4-6" time="2.452">
+  <properties/>
+  <testcase name="testGroupDeletion" classname="ru.stqa.learn.addressbook.tests.GroupDeletionTests" time="2.452"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

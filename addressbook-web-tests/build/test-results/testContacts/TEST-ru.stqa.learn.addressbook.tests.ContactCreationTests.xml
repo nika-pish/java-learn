@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.learn.addressbook.tests.ContactCreationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-10-27T12:12:59" hostname="HP820G4-6" time="34.69">
+  <properties/>
+  <testcase name="testContactCreation[0](ContactData{id=2147483647, firstname='Sidor 0', lastname='Sidorov 0'})" classname="ru.stqa.learn.addressbook.tests.ContactCreationTests" time="21.722"/>
+  <testcase name="testContactCreation[1](ContactData{id=2147483647, firstname='Sidor 1', lastname='Sidorov 1'})" classname="ru.stqa.learn.addressbook.tests.ContactCreationTests" time="12.963"/>
+  <system-out><![CDATA[Ivanov
+Ivanovich
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Ivanov
+Ivanovich
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Ivanov
+Ivanovich
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 0
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+Sidorov 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

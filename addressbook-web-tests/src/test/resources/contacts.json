@@ -20,16 +20,5 @@
     "bmonth": "February",
     "byear": "1999",
     "group": "test2"
-  },
-  {
-    "firstname": "Sidor 2",
-    "lastname": "Sidorov 2",
-    "address": "Saint-Petersburg 2",
-    "mobilePhone": "555 2",
-    "email": "222443@fake.fake 2",
-    "bday": "1",
-    "bmonth": "February",
-    "byear": "1999",
-    "group": "test2"
   }
 ]
