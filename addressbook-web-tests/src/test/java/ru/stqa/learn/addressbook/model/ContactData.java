@@ -244,7 +244,13 @@ public class ContactData {
     return group;
   }
 
-  public File getPhoto() { return new File(photo); }
+  public File getPhoto() {
+    if (photo != null) {
+    return new File(photo);
+  } else {
+    return null;
+  }
+  }
 
 
   @Override
