@@ -3,11 +3,13 @@ package ru.stqa.learn.addressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.learn.addressbook.model.ContactData;
 import ru.stqa.learn.addressbook.model.Contacts;
 import ru.stqa.learn.addressbook.model.GroupData;
+import ru.stqa.learn.addressbook.model.Groups;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -55,7 +57,7 @@ public class ContactCreationTests extends TestBase {
     }
   }
 
-  @Test (dataProvider = "validContactsFromJson")
+  @Test(dataProvider = "validContactsFromJson")
   public void testContactCreation(ContactData contact) throws Exception {
     app.goTo().homePage();
     Contacts before = app.db().contacts();
@@ -69,16 +71,25 @@ public class ContactCreationTests extends TestBase {
     verifyContactListInUI();
   }
 
-  @Test (enabled = false)
+  @BeforeMethod
+  public void ensurePreconditions() {
+    if (app.db().groups().size() == 0) {
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("test1"));
+    }
+  }
+
+  @Test(enabled = true)
   public void testContactCreationWithPhoto() {
-    app.goTo().homePage();
-    Contacts before = app.db().contacts();
+    Groups groups = app.db().groups();
     File photo = new File("src/test/resources/stru.png");
     ContactData contact = new ContactData()
             .withFirstname("Petr").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
             .withPhoto(photo).withAddress("Moscow").withHomePhone("111").withMobilePhone("222").withWorkPhone("333")
             .withEmail("222443@fake.fake").withEmail2("555666@fake.fake").withEmail3("777888@fake.fake")
-            .withBday("1").withBmonth("January").withByear("1990").withGroup("test2");
+            .withBday("1").withBmonth("January").withByear("1990").inGroup(groups.iterator().next());
+    app.goTo().homePage();
+    Contacts before = app.db().contacts();
     app.goTo().addNewContactPage();
     app.contact().create(contact);
     app.goTo().homePage();
@@ -89,14 +100,15 @@ public class ContactCreationTests extends TestBase {
     verifyContactListInUI();
   }
 
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void testBadContactCreation() throws Exception {
-    app.goTo().homePage();
-    Contacts before = app.db().contacts();
+    Groups groups = app.db().groups();
     ContactData contact = new ContactData()
             .withFirstname("Petr'").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
             .withAddress("Moscow").withHomePhone("111").withMobilePhone("222").withWorkPhone("333").withEmail("222443@fake.fake")
-            .withBday("1").withBmonth("January").withByear("1990").withGroup("test2");
+            .withBday("1").withBmonth("January").withByear("1990").inGroup(groups.iterator().next());
+    app.goTo().homePage();
+    Contacts before = app.db().contacts();
     app.goTo().addNewContactPage();
     app.contact().create(contact);
     app.goTo().homePage();
@@ -106,4 +118,3 @@ public class ContactCreationTests extends TestBase {
     verifyContactListInUI();
   }
 }
-

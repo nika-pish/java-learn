@@ -21,7 +21,7 @@ public class ContactEmailAndAddressTests extends TestBase {
               .withFirstname("Petr").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
               .withAddress("Moscow, Red Square (1)").withHomePhone("+7 (111)").withMobilePhone("22-22").withWorkPhone("333")
               .withEmail("222443@fake.fake").withEmail2("555666@fake.fake").withEmail3("777888@fake.fake")
-              .withBday("1").withBmonth("January").withByear("1990").withGroup("test1"));
+              .withBday("1").withBmonth("January").withByear("1990"));
       app.goTo().homePage();
     }
   }
@@ -36,8 +36,8 @@ public class ContactEmailAndAddressTests extends TestBase {
   }
 
   private String mergeEmails(ContactData contact) {
-    return Arrays.asList(contact.getEmail(),contact.getEmail2(),contact.getEmail3())
-            .stream().filter((s)-> !s.equals(""))
+    return Arrays.asList(contact.getEmail(), contact.getEmail2(), contact.getEmail3())
+            .stream().filter((s) -> !s.equals(""))
             .collect(Collectors.joining("\n"));
   }
 }

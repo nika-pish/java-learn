@@ -19,10 +19,10 @@ public class ContactPhoneTests extends TestBase {
     app.goTo().homePage();
     if (app.contact().list().size() == 0) {
       app.goTo().addNewContactPage();
-      app.contact().create(new ContactData()
-              .withFirstname("Petr").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
-              .withAddress("Moscow").withHomePhone("+7 (111)").withMobilePhone("22-22").withWorkPhone("333").withEmail("222443@fake.fake")
-              .withBday("1").withBmonth("January").withByear("1990").withGroup("test1"));
+    app.contact().create(new ContactData()
+           .withFirstname("Petr").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
+            .withAddress("Moscow").withHomePhone("+7 (111)").withMobilePhone("22-22").withWorkPhone("333").withEmail("222443@fake.fake")
+            .withBday("1").withBmonth("January").withByear("1990"));
       app.goTo().homePage();
     }
   }

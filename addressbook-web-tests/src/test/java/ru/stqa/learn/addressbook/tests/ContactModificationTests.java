@@ -4,6 +4,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.learn.addressbook.model.ContactData;
 import ru.stqa.learn.addressbook.model.Contacts;
+import ru.stqa.learn.addressbook.model.GroupData;
+import ru.stqa.learn.addressbook.model.Groups;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -18,7 +20,7 @@ public class ContactModificationTests extends TestBase {
       app.contact().create(new ContactData()
               .withFirstname("Petr").withMiddlename("Ivanovich").withLastname("Ivanov").withNickname("IvIv")
               .withAddress("Moscow").withMobilePhone("44555").withEmail("222443@fake.fake")
-              .withBday("1").withBmonth("January").withByear("1990").withGroup("test1"));
+              .withBday("1").withBmonth("January").withByear("1990"));
       app.goTo().homePage();
     }
   }
@@ -39,4 +41,4 @@ public class ContactModificationTests extends TestBase {
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
     verifyContactListInUI();
   }
-  }
+}

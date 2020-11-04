@@ -82,11 +82,11 @@ public class ContactDataGenerator {
   private List<ContactData> generateContacts(int count) {
     List<ContactData> contacts = new ArrayList<ContactData>();
     for (int i = 0; i < count; i++) {
-      contacts.add(new ContactData().withLastname(String.format("Sidorov %s", i))
+     contacts.add(new ContactData().withLastname(String.format("Sidorov %s", i))
               .withFirstname(String.format("Sidor %s", i)).withAddress(String.format("Saint-Petersburg %s", i))
               .withEmail(String.format("222443@fake.fake %s", i)).withMobilePhone(String.format("555 %s", i))
               .withBday(String.format("1", i)).withBmonth(String.format("February", i))
-              .withByear(String.format("1999", i)).withGroup(String.format("test2", i)));
+              .withByear(String.format("1999", i)));
     }
     return contacts;
   }
