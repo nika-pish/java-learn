@@ -1,11 +1,16 @@
 package ru.stqa.learn.addressbook.tests;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.learn.addressbook.model.ContactData;
 import ru.stqa.learn.addressbook.model.Contacts;
 import ru.stqa.learn.addressbook.model.GroupData;
 import ru.stqa.learn.addressbook.model.Groups;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RemovingContactFromGroup extends TestBase {
 
@@ -29,7 +34,22 @@ public class RemovingContactFromGroup extends TestBase {
       app.goTo().homePage();
       ContactData removingContact = before.iterator().next();
       GroupData group = groups.iterator().next();
-      app.contact().removeContactFromGroup(removingContact,group);
+
+      if (removingContact.getGroups().size() == 0) {
+        app.goTo().groupPage();
+        app.contact().addContactToGroup(removingContact,group);
+      }
+
+      int contactId = removingContact.getId();
+      ContactData newContact = app.db().GetContactDataById(contactId);
+      Groups groupsOfContactBefore = newContact.getGroups();
+      app.goTo().homePage();
+      GroupData groupWithoutContact = newContact.getGroups().iterator().next();
+      app.contact().removeContactFromGroup(removingContact, groupWithoutContact);
+      Groups groupsOfContactAfter = app.db().GetContactDataById(contactId).getGroups();
+      assertThat(groupsOfContactBefore.size() - 1, equalTo(groupsOfContactAfter.size()));
+      assertThat(groupsOfContactAfter, equalTo(groupsOfContactBefore.without(groupWithoutContact)));
+
     }
   }
 

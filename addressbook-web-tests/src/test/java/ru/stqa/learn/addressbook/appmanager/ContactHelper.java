@@ -200,5 +200,6 @@ public class ContactHelper extends HelperBase {
   private void submitContactRemovingFromGroup() {
     click(By.name("remove"));
   }
+
 }
 

@@ -12,7 +12,7 @@ import java.util.Set;
 
 @XStreamAlias("group")
 @Entity
-@Table (name = "group_list")
+@Table(name = "group_list")
 public class GroupData {
   @XStreamOmitField
   @Id
@@ -30,10 +30,10 @@ public class GroupData {
   @Type(type = "text")
   private String footer;
 
-  @ManyToMany(mappedBy = "groups")
+  @ManyToMany(mappedBy = "groups",fetch = FetchType.EAGER)
   private Set<ContactData> contacts = new HashSet<ContactData>();
 
-  public Contacts getContacts() {
+  public Set<ContactData> getContacts() {
     return new Contacts(contacts);
   }
 
@@ -98,4 +98,14 @@ public class GroupData {
   public int hashCode() {
     return Objects.hash(id, name, header, footer);
   }
+
+  public boolean hasContact(ContactData contact) {
+    for (GroupData group : contact.getGroups()) {
+      if (group.getId() == this.getId()) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
+
