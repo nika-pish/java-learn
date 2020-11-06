@@ -287,6 +287,10 @@ public class ContactData {
             '}';
   }
 
+  private Object readResolve() {
+    groups = new HashSet<GroupData>();
+    return this;
+  }
 
   public ContactData inGroup(GroupData group) {
     groups.add(group);
