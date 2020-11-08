@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.learn.mantis.tests.RegistrationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-08T15:13:09" hostname="HP820G4-6" time="6.04">
+  <properties/>
+  <testcase name="TestRegistration" classname="ru.stqa.learn.mantis.tests.RegistrationTests" time="6.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 42881
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1604848392.843][WARNING]: This version of ChromeDriver has not been tested with Chrome version 86.
+ноя 08, 2020 6:13:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
