@@ -22,7 +22,7 @@ public class ApplicationManager {
   private MailHelper mailHelper;
   private JamesHelper jamesHelper;
   private DbHelper dbHelper;
-  private UserHelper usersHelper;
+  private UserHelper userHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -88,11 +88,11 @@ public HttpSession newSession(){
     return jamesHelper;
   }
 
-  public UserHelper usersHelper() {
-    if (usersHelper == null) {
-      usersHelper = new UserHelper(this);
+  public UserHelper userHelper() {
+    if (userHelper == null) {
+      userHelper = new UserHelper(this);
     }
-    return usersHelper;
+    return userHelper;
   }
 
   public DbHelper db() {

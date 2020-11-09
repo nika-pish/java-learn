@@ -26,12 +26,12 @@ public class ChangePasswordTests extends TestBase{
       UserData user = users.iterator().next();
       System.out.println(user.getId());
 
-      app.usersHelper().start("administrator", "root");
-      app.usersHelper().resetPassword(Integer.toString(user.getId()));
+      app.userHelper().start("administrator", "root");
+      app.userHelper().resetPassword(Integer.toString(user.getId()));
       List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
       String confirmationLink = findConfirmationLink(mailMessages, user.getEmail());
       System.out.println(confirmationLink);
-      app.usersHelper().changeAccount(confirmationLink, user.getUsername());
+      app.userHelper().changeAccount(confirmationLink, user.getUsername());
 
       HttpSession session = app.newSession();
       assertTrue(session.login(user.getUsername(), "new_password"));
