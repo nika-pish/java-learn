@@ -15,6 +15,8 @@ dependencies {
     implementation 'org.subethamail:subethasmtp:3.1.7'
     implementation 'javax.mail:mail:1.5.0-b01'
     implementation 'ru.lanwen.verbalregex:java-verbal-expressions:1.6'
+    implementation 'mysql:mysql-connector-java:8.0.22'
+    implementation 'org.hibernate:hibernate-core:5.4.23.Final'
 }
 test {
     useTestNG{
