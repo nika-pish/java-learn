@@ -11,15 +11,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.MatchResult;
 
 public class ApplicationManager {
   private final Properties properties;
   private WebDriver wd;
 
   private String browser;
-  private RegistrationHleper registrationHelper;
+  private RegistrationHelper registrationHelper;
   private FtpHelper ftp;
+  private MailHelper mailHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -46,9 +46,9 @@ public HttpSession newSession(){
    return properties.getProperty(key);
   }
 
-  public RegistrationHleper registration() {
+  public RegistrationHelper registration() {
     if (registrationHelper == null) {
-      registrationHelper = new RegistrationHleper(this);
+      registrationHelper = new RegistrationHelper(this);
     } return registrationHelper;
   }
 
@@ -71,6 +71,11 @@ public HttpSession newSession(){
       wd.get(properties.getProperty("web.baseUrl"));
     }
     return wd;
+  }
+  public MailHelper mail(){
+    if (mailHelper == null){
+      mailHelper = new MailHelper(this);
+    } return mailHelper;
   }
 }
 
