@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stga.learn.soap.GeoIpServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-13T16:25:09" hostname="HP820G4-6" time="0.924">
+  <properties/>
+  <testcase name="testMyIp" classname="ru.stga.learn.soap.GeoIpServiceTests" time="0.924"/>
+  <system-out><![CDATA[<GeoIP><Country>RU</Country><State>66</State></GeoIP>
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
