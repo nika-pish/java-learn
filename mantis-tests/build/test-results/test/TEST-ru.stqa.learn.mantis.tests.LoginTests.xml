@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.learn.mantis.tests.LoginTests" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-11-15T15:16:41" hostname="HP820G4-6" time="0.612">
+  <properties/>
+  <testcase name="testLogin" classname="ru.stqa.learn.mantis.tests.LoginTests" time="0.612">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

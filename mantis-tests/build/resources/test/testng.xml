@@ -6,6 +6,7 @@
             <class name="ru.stqa.learn.mantis.tests.LoginTests" />
             <class name="ru.stqa.learn.mantis.tests.RegistrationTests" />
             <class name="ru.stqa.learn.mantis.tests.ChangePasswordTests" />
+            <class name="ru.stqa.learn.mantis.tests.SoapTests" />
         </classes>
     </test>
 </suite>

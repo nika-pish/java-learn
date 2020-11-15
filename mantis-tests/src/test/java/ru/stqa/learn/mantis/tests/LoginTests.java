@@ -3,6 +3,7 @@ package ru.stqa.learn.mantis.tests;
 import org.testng.annotations.Test;
 import ru.stqa.learn.mantis.appmanager.HttpSession;
 
+import javax.xml.rpc.ServiceException;
 import java.io.IOException;
 
 import static org.testng.Assert.assertTrue;
@@ -10,7 +11,8 @@ import static org.testng.Assert.assertTrue;
 public class LoginTests extends TestBase {
 
   @Test
-  public void testLogin () throws IOException {
+  public void testLogin () throws IOException, ServiceException {
+    skipIfNotFixed(0000001);
     HttpSession session = app.newSession();
     assertTrue(session.login("administrator", "root"));
     assertTrue(session.isLoggedInAs("administrator"));
