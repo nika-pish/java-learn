@@ -6,6 +6,16 @@ public class Issue {
   private int id;
   private String subject;
   private String description;
+  private String state_name;
+
+  public String getState_name() {
+    return state_name;
+  }
+
+  public Issue withState_name(String state) {
+    this.state_name = state;
+    return this;
+  }
 
   public int getId() {
     return id;
